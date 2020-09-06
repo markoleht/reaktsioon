@@ -1,26 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Tweet from './Tweet';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function app() {
+
+  const
+
+  return(
+    <div className="app">
+      <Tweet name="esimene" message="Soy numero uuno" rating="jälle mina, appi"/>
+      <Tweet name="teine" message=" kakskendkaks viimne taks" rating=" pagan küll"/>
+      <Tweet name="kolmas" message="kolm on seltskond" rating="pronks on ponks"/>
+      <Tweet name="neljas" message=" neli on kaks paari" rating="ma tulin lihtsalt vaatama"/> 
     </div>
   );
 }
 
-export default App;
+export default app;
