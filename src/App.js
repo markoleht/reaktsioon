@@ -1,16 +1,18 @@
-import React from 'react';
-import Tweet from './Tweet';
+import React, { useState } from 'react';
+import Tweet from "./Tweet";
 
 function app() {
+  const [users, setUsers] = useState ([
+    { name: "Eeduard", message: "Hello there" },
+    { name: "Piret", message: "miks sa Eesti keeles ei räägi?" },
+    { name: "Turvamees", message: "Lepime kokku, et siin ei räägi, eks" },
+  ]);
 
-  const
-
-  return(
+  return (
     <div className="app">
-      <Tweet name="esimene" message="Soy numero uuno" rating="jälle mina, appi"/>
-      <Tweet name="teine" message=" kakskendkaks viimne taks" rating=" pagan küll"/>
-      <Tweet name="kolmas" message="kolm on seltskond" rating="pronks on ponks"/>
-      <Tweet name="neljas" message=" neli on kaks paari" rating="ma tulin lihtsalt vaatama"/> 
+      {users.map((user) => (
+        <Tweet name={user.name} message={user.message} />
+      ))}
     </div>
   );
 }
